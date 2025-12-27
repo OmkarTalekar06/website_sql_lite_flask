@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Attendance Calendar</h2>
+
+<table border="1">
+<tr>
+    <th>Date</th>
+    <th>Name</th>
+    <th>Status</th>
+</tr>
+
+{% for d, n, s in data %}
+<tr style="background-color: {% if s=='Present' %}lightgreen{% else %}lightcoral{% endif %}">
+    <td>{{ d }}</td>
+    <td>{{ n }}</td>
+    <td>{{ s }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+<br>
+<a href="/">Back</a>
+
+</body>
+</html>
